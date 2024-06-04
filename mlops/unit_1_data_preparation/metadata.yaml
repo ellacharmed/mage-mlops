@@ -1,0 +1,16 @@
+features:
+  add_new_block_v2: true
+  automatic_kernel_cleanup: true
+  command_center: true
+  compute_management: true
+  custom_design: false
+  data_integration_in_batch_pipeline: true
+  dbt_v2: false
+  global_hooks: true
+  interactions: true
+  display_local_timezone: true
+  notebook_block_output_split_view: true
+  operation_history: true
+  polars: false
+help_improve_mage:
+pipelines:
