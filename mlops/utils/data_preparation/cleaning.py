@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def clean(
     df: pd.DataFrame,
     include_extreme_durations: bool = False,

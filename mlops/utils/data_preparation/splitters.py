@@ -13,6 +13,8 @@ def split_on_value(
     df_train = df[df[feature] < value]
     df_val = df[df[feature] >= value]
 
+    print(value)
+
     if return_indexes:
         return df_train.index, df_val.index
 
