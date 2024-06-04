@@ -48,6 +48,23 @@ blocks:
   upstream_blocks:
   - fill_in_missing_values
   uuid: export_titanic_clean
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_0_setup/markdowns/results.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: results
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: results
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -70,5 +87,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: example_pipeline
-variables_dir: /root/.mage_data/unit_0_setup
+variables_dir: /home/src/mage_data/unit_0_setup
 widgets: []
