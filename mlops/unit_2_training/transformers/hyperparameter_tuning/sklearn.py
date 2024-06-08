@@ -10,6 +10,7 @@ from mlops.utils.models.sklearn import load_class, tune_hyperparameters
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer
 
+print_mlflow_version()
 
 @transformer
 def hyperparameter_tuning(

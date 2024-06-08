@@ -30,7 +30,7 @@ blocks:
   language: python
   name: retrain/XGBoost
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: custom
   upstream_blocks:
