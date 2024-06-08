@@ -72,7 +72,7 @@ description: Collect data from various sources, generate additional training dat
   of useful input features.
 executor_config: {}
 executor_count: 1
-executor_type: null
+executor_type: local_python
 extensions: {}
 name: Data preparation
 notification_config: {}
@@ -89,7 +89,7 @@ variables:
   split_on_feature: lpep_pickup_datetime
   split_on_feature_value: '2024-02-01'
   target: duration
-variables_dir: /root/.mage_data/unit_1_data_preparation
+variables_dir: /home/src/mage_data/unit_3_observability
 widgets:
 - all_upstream_blocks_executed: true
   color: null
@@ -111,8 +111,7 @@ widgets:
   status: executed
   timeout: null
   type: chart
-  upstream_blocks:
-  - ingest
+  upstream_blocks: []
   uuid: ingest_time_series_bar_chart_d1
 - all_upstream_blocks_executed: true
   color: null
@@ -129,11 +128,10 @@ widgets:
   language: python
   name: missing values for ingest
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: chart
-  upstream_blocks:
-  - ingest
+  upstream_blocks: []
   uuid: missing_values_for_ingest
 - all_upstream_blocks_executed: true
   color: null
@@ -232,7 +230,7 @@ widgets:
   language: python
   name: prepare_histogram_u9
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: chart
   upstream_blocks:

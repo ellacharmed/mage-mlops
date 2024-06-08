@@ -57,7 +57,7 @@ features:
   add_new_block_v2: true
   automatic_kernel_cleanup: true
   command_center: true
-  compute_management: true
+  compute_management: false
   custom_design: false
   data_integration_in_batch_pipeline: true
   dbt_v2: false

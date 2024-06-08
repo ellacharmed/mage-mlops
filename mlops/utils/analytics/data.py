@@ -38,6 +38,7 @@ def load_data(*args, **kwargs) -> pd.DataFrame:
         processed_rows = []
         for row in rows:
             run_uuid, run_id, model, start_time, mse, rmse = row
+            aux = start_time / 1000
             start_time = datetime.utcfromtimestamp(start_time / 1000)
             start_time_day = start_time.day
             start_time_hour = start_time.hour
@@ -53,7 +54,7 @@ def load_data(*args, **kwargs) -> pd.DataFrame:
                 rmse=rmse,
                 run_id=run_id,
                 run_uuid=run_uuid,
-                start_time=start_time,
+                start_time=aux, #start_time,
                 start_time_day=start_time_day,
                 start_time_format_day=start_time_format_day,
                 start_time_format_hour=start_time_format_hour,

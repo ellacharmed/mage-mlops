@@ -57,14 +57,15 @@ blocks:
       group_by:
       - model
       metrics:
-      - aggregation: count_distinct
-        column: run_uuid
+      - aggregation: count
+        column: run_id
       y_sort_order: descending
       y_tooltip_label_format: return `${value} total runs`
     data_source:
       type: chart_code
     error: null
     name: Total runs by model
+    name_new: Total runs by model
     skip_render: false
     type: chart
     uuid: total_runs_by_model

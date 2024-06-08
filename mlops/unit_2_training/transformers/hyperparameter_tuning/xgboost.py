@@ -5,7 +5,7 @@ import xgboost as xgb
 from pandas import Series
 from scipy.sparse._csr import csr_matrix
 
-from mlops.utils.logging import track_experiment
+from mlops.utils.logging import track_experiment, print_mlflow_version
 from mlops.utils.models.xgboost import build_data, tune_hyperparameters
 
 if 'transformer' not in globals():
@@ -13,6 +13,7 @@ if 'transformer' not in globals():
 if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 
+print_mlflow_version()
 
 @transformer
 def hyperparameter_tuning(

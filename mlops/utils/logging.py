@@ -16,8 +16,14 @@ from sklearn.base import BaseEstimator
 
 DEFAULT_DEVELOPER = os.getenv('EXPERIMENTS_DEVELOPER', 'mager')
 DEFAULT_EXPERIMENT_NAME = 'nyc-taxi-experiment'
-DEFAULT_TRACKING_URI = 'sqlite:///home/mlflow/mlflow.db' #'sqlite:///mlflow.db'
+#'sqlite:///mlflow.db', edited for hmwk with separate UI tab at http://localhost:5000/#/
+# DEFAULT_TRACKING_URI = 'sqlite:///mlflow.db' 
+mlflow.set_tracking_uri(uri="http://0.0.0.0:5000/")
 
+def print_mlflow_version():
+    version = mlflow.__version__
+    print(f"MLflow version: {version}")
+    print(f"tracking URI: '{mlflow.get_tracking_uri()}'")
 
 def setup_experiment(
     experiment_name: Optional[str] = None,

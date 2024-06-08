@@ -27,4 +27,3 @@ def train(
     model.fit(X, y)
 
     return model, model_info
-    

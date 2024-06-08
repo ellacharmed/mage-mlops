@@ -1,0 +1,17 @@
+triggers:
+- description: null
+  envs: []
+  last_enabled_at: 2024-06-03 05:17:44.149844+00:00
+  name: 03_hourly
+  pipeline_uuid: data_preparation
+  schedule_interval: '@hourly'
+  schedule_type: time
+  settings: null
+  sla: null
+  start_time: 2024-06-02 01:53:00+00:00
+  status: active
+  token: 17bfb230424c4a078965130b3369d47e
+  variables:
+    split_on_feature: lpep_pickup_datetime
+    split_on_feature_value: '2024-02-01'
+    target: duration

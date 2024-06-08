@@ -3,6 +3,7 @@ from io import BytesIO
 from typing import List
 
 import pandas as pd
+import numpy as np
 
 if 'data_loader' not in globals():
     from mage_ai.data_preparation.decorators import data_loader
@@ -23,6 +24,12 @@ def ingest_files(**kwargs) -> pd.DataFrame:
                 raise Exception(response.text)
 
             df = pd.read_parquet(BytesIO(response.content))
+            # if time series chart on mage error, add code below
+            df['lpep_pickup_epoch'] = df['lpep_pickup_datetime'].astype(np.int64) // 10**9
+
             dfs.append(df)
+            
+    
+    # print(pd.concat(dfs).info())
 
     return pd.concat(dfs)

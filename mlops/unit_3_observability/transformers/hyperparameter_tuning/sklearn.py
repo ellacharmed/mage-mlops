@@ -34,6 +34,7 @@ def hyperparameter_tuning(
         y_val=y_val,
         max_evaluations=kwargs.get('max_evaluations'),
         random_state=kwargs.get('random_state'),
+        callback=lambda **opts: track_experiment(**{**opts, **kwargs}),
     )
 
     return hyperparameters, X, y, dict(cls=model_class, name=model_class_name)

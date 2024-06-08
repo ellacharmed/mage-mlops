@@ -2,25 +2,24 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration:
-    file_path: unit_2_training/global_data_products/training_set_gdp.py
     file_source:
-      path: unit_2_training/global_data_products/training_set_gdp.py
+      path: unit_2_training/global_data_products/training_set.py
     global_data_product:
-      uuid: training_set_data_prep_02
+      uuid: training_set
   downstream_blocks:
-  - hyperparameter_tuning/xgboost
   - xgboost
+  - hyperparameter_tuning/xgboost
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: training set gdp
+  name: Training set
   retry_config: null
   status: executed
   timeout: null
   type: global_data_product
   upstream_blocks: []
-  uuid: training_set_gdp
+  uuid: training_set
 - all_upstream_blocks_executed: true
   color: null
   configuration:
@@ -34,11 +33,11 @@ blocks:
   language: python
   name: Hyperparameter tuning/XGBoost
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: transformer
   upstream_blocks:
-  - training_set_gdp
+  - training_set
   uuid: hyperparameter_tuning/xgboost
 - all_upstream_blocks_executed: true
   color: null
@@ -56,7 +55,7 @@ blocks:
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - training_set_gdp
+  - training_set
   - hyperparameter_tuning/xgboost
   uuid: xgboost
 cache_block_output_in_memory: false

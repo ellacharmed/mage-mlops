@@ -5,13 +5,16 @@ features:
   add_new_block_v2: true
   command_center: true
   compute_management: false
-  custom_design: true
+  custom_design: false
   data_integration_in_batch_pipeline: true
-  dbt_v2: true
+  dbt_v2: false
   global_hooks: true
   interactions: true
   display_local_timezone: true
   notebook_block_output_split_view: true
   operation_history: true
-  polars: true
+  polars: false
+  automatic_kernel_cleanup: true
 help_improve_mage: true
+project_uuid: f1e30a0f8d334b6493dc72fd8e6f965c
+pipelines:

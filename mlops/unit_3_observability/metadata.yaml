@@ -2,8 +2,8 @@
 # https://support.google.com/mail/answer/185833?hl=en
 notification_config:
   alert_on:
-    - trigger_failure
-    - trigger_passed_sla
+  - trigger_failure
+  - trigger_passed_sla
     # - trigger_success
   email_config:
     smtp_host: smtp.gmail.com
@@ -11,4 +11,20 @@ notification_config:
     smtp_password: "{{ env_var('SMTP_PASSWORD') }}"
     smtp_mail_from: "{{ env_var('SMTP_EMAIL') }}"
     to_emails:
-      - "{{ env_var('SMTP_EMAIL') }}"
+    - "{{ env_var('SMTP_EMAIL') }}"
+features:
+  add_new_block_v2: true
+  command_center: true
+  compute_management: false
+  custom_design: true
+  data_integration_in_batch_pipeline: true
+  dbt_v2: false
+  global_hooks: false
+  interactions: true
+  display_local_timezone: true
+  notebook_block_output_split_view: true
+  operation_history: true
+  polars: false
+  automatic_kernel_cleanup: true
+help_improve_mage:
+pipelines:
