@@ -45,7 +45,8 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - "${PWD}/mlflow:/home/mlflow/"
+      - "${PWD}/mlflow:/home/"
+      - "${PWD}/mlflow/mlartifacts:/home/mlartifacts/"
     networks:
       - app-network
 networks:
